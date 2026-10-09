@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Enjoy privacy policy</title><link rel="stylesheet" href="style.css"></head><body><header><a href="./">Enjoy</a></header>
+<h1 id="privacy-policy--enjoy">Privacy Policy — Enjoy</h1>
+<p><strong>Last updated:</strong> October 8, 2026</p>
+<h2 id="who-holds-your-data">Who holds your data</h2>
+<p>Enjoy is an app for a server that someone runs. Who holds your data
+depends on which server you signed in to:</p>
+<p><strong>(a) You use your own server.</strong> You typed the server
+address yourself (a home machine, a VPS, or any host you control).
+<strong>You hold your data.</strong> The server stores your saved items,
+ratings, reviews, tags, and photos. The developer of Enjoy receives none
+of it and has no access to it.</p>
+<p><strong>(b) You joined a shared server with an invite code.</strong>
+The person who runs that server holds your data: your account email,
+display name, saved items, photos, ratings, and reviews. That person can
+see it and can delete it. The developer of Enjoy (Peter Wickwire) runs
+one such shared server and gives out invite codes for it; if your code
+came from the developer, the developer is the operator and holds that
+data. It is used only to provide the service to you. It is not sold,
+shared, or used for advertising or tracking.</p>
+<h2 id="what-is-stored-on-the-phone">What is stored on the phone</h2>
+<p>Enjoy stores the following on your device so it can work offline:</p>
+<ul>
+<li><strong>Server URL and bearer token</strong> — saved in the device's
+secure store (<code>expo-secure-store</code>). Removed on sign-out, "Use
+a different server", and account deletion.</li>
+<li><strong>Reader preferences</strong> — text size, theme, and font —
+stored in the secure store.</li>
+<li><strong>Share-extension session copy</strong> — a copy of the server
+URL and token written to the App Group container
+(<code>group.com.pjland.enjoy</code>) so the "Save to Enjoy" share
+extension can save items without opening the app.</li>
+<li><strong>Offline save queue</strong> — if you share a link while
+offline, the save is stored locally in the App Group container and sent
+when the network is available again.</li>
+<li><strong>Local database</strong> — a mirror of your server data
+(items, tags, saved article text, sync position, cached user info, and
+the outbox of changes not yet sent) in a SQLite file. Also includes item
+images downloaded from the server. Removed when you sign in as a
+different account, choose "Sign out, remove data", or delete your
+account.</li>
+<li><strong>Item images</strong> — photos taken or picked for beer, wine
+and other items, and images downloaded from the server, stored in the
+app's Documents directory.</li>
+</ul>
+<p>None of this is sent anywhere except the server you signed in to.</p>
+<h2 id="what-enjoy-sends-to-your-server">What Enjoy sends to your
+server</h2>
+<p>When you are signed in, Enjoy sends the following to the server you
+signed in to (your own, or the shared one):</p>
+<ul>
+<li>Your authentication token (to prove your identity).</li>
+<li>Items you save (URLs, text, photos).</li>
+<li>Ratings, reviews, and tasting notes you add.</li>
+<li>Tags you create.</li>
+<li>Your profile information (name, email) as managed by the
+server.</li>
+<li>Search runs on the phone's own copy; search text is not sent
+anywhere.</li>
+</ul>
+<p>All communication is encrypted in transit (HTTPS). The app also
+supports local-network connections (HTTP on your home network) for
+self-hosted setups.</p>
+<h2 id="optional-ai-features">Optional AI features</h2>
+<p>If the server owner enables AI categorization, item content (such as
+a URL's text or a photo) may be sent to an AI model for automatic
+tagging. This happens on the server side — the app does not directly
+contact any AI provider. The model is the one chosen by the person who
+runs the server (for example, a local Ollama model or the Anthropic
+API). The app does not control or configure AI features; this depends
+entirely on the server owner's setup.</p>
+<h2 id="what-enjoy-does-not-do">What Enjoy does not do</h2>
+<ul>
+<li><strong>No analytics.</strong> Enjoy does not send usage data, crash
+reports, or telemetry to any third party.</li>
+<li><strong>No ads.</strong> Enjoy contains no advertising and does not
+participate in any ad networks.</li>
+<li><strong>No tracking.</strong> Enjoy does not track you across apps
+or websites. It does not use any tracking SDKs.</li>
+<li><strong>No data sharing.</strong> Your data goes only to the server
+you signed in to. It is not sold or passed to any third party.</li>
+</ul>
+<h2 id="deleting-your-account">Deleting your account</h2>
+<p>In the app, go to <strong>Settings &gt; Delete account</strong>. This
+screen says that the account and everything in it (links, beer and wine,
+ratings, reviews, tags, saved articles, photos) is permanently deleted
+from the server and from the phone, asks for your password, and has a
+destructive "Delete my account permanently" button.</p>
+<p>On success, the app removes every item, tag, saved article, sync
+position, cached user and the outbox from the local database; deletes
+all downloaded and not-yet-uploaded image files; deletes the stored
+server address and bearer token; deletes the session copy shared with
+the share extension; deletes any saves waiting in the extension's
+offline queue; and shows the first-run screen. Reader preferences (text
+size, theme, font) are kept because they hold no account data.</p>
+<p>If the server cannot be reached, the screen says so and nothing
+changes on the server or the phone; the request is not queued.</p>
+<h2 id="contact">Contact</h2>
+<p>For questions about this privacy policy, contact:</p>
+<p><a
+href="https://pajamaw.github.io/enjoy-site/">https://pajamaw.github.io/enjoy-site/</a>
+(the support page explains how to reach the developer)</p>
+<p>For questions about your data on your server, contact the person or
+organization that runs your Enjoy server.</p>
+<footer>Enjoy · <a href="./">Support</a> · <a href="privacy.html">Privacy</a></footer></body></html>
